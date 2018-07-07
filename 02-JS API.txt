@@ -1,0 +1,60 @@
+1.DOM
+  网页的所有元素都是文档中的一个节点，我们要操作网页中的某个元素，就要先获取他的元素节点。
+2.document.querySelector('.box')只能返回到第一个匹配到的元素。
+  document.querySelectorAll('.box')返回所有；
+3.this是指向：
+  普通函数中的this   ->   windows
+  构造函数中的this   ->   是当前构造函数创建的对象
+  方法中的this       ->   方法所属的对象
+  事件处理函数中的this   ->   事件源，谁调用的该事件this就指向谁
+4.innerHTML  会原封不动的获取到标签及内容，不解析标签
+  innerText  会解析标签，如果中间有空格和换行也会去掉
+  textContent    会解析标签，但是不会去掉空格和换行
+5.typeof检查属性类型，如果存在返回该属性类型，如果不存在则返回undefuned
+6.如果不支持元素的innerText属性，则使用element.textContent获取;
+7.表单元素属性：value,type,disabled(禁用属性),checked,selected直接打点调用
+8.onfocus获取焦点事件，onblur文本框失去焦点事件
+9.getAttribute()获取自定义属性，setAttribute()设置自定义属性，removeAttribute()移除自定义属性；
+10.创建节点的三种方式：
+    document.write('新设置的内容<p>标签生成</p>');
+    box.innerHTML='新设置的内容<p>标签生成</p>';
+    var div=document.createElement('div').
+11.节点操作：
+    appendChild(新元素)，追加节点到父元素的最后一个位置；  insertBefore(新元素，参照元素)，把新元素放在参照元素的前面；
+    replaceChild(新元素，旧元素)，新元素替换旧元素；       removeChild(要删除的子元素)，把要删除的元素从DOM树中移除；
+12.节点层级
+              1.层次：parentNode()，父节点；  childNodes(),子节点；    children(),子元素；    fristChild()，获取第一个子节点；
+                      fristElementChild(),获取第一个子元素；   lastChild(),获取最后一个子节点；    lastElementChild(),获取最后一个子元素；
+              2.同级：previousSibling(),获取上一个兄弟节点；    previousElementSibling(),获取上一个兄弟元素；
+             	      nexSibling(),获取下一个兄弟节点；         nexElementSibling(),获取下一个兄弟节点；
+13.  1.添加事件监听的方式
+    	addEventListener(事件类型(不加on)，事件处理程序(函数体，要解绑就不能有匿名函数)，是否捕获（true捕获或false冒泡）);
+	attachEvent(事件类型（加on），事件处理程序）ie9以后兼容           		
+     2.解绑事件监听的方式
+	removeEventListener(事件类型（不加on）,事件处理程序（函数体）；
+	detachEvent(事件类型（加on），事件处理程序)  IE678支持
+14.事件阶段
+   1捕获阶段	--从上往下找到元素
+   2目标阶段	--找到元素后，执行当前点击的事件处理函数；
+   3冒泡阶段 	--从下往上找，一直找到不能找到为止；
+15.事件对象
+	含义：当事件发生的时候，和事件相关的数据记录到了事件对象中。
+	获取：1.主流浏览器通过参数形式获取（e）;2.IE678事件对象记录到window.event属性中
+	兼容性处理：var e = e || window.event;
+ 	事件对象的属性：target,真正触发事件的元素（主流浏览器支持）；    srcElement，真正触发事件的元素（早版本的IE支持）；
+ 			currenTarget，当前事件处理程序归属的对象；
+			clientX,Y获取的鼠标在浏览器的可视区域的坐标；    pageX，Y鼠标在当前页面的位置
+	事件对象的方法：1.阻止浏览器默认行为：
+				return false  取消默认行为执行；     e.preventDefault()   DOM标准方法；
+			2.阻止事件冒泡：
+				e.stopPropagation()  标准的DOM方法    e.cancelBubble = true;  取消冒泡，非标准的方式，老版IE支持
+16.键盘和鼠标事件
+	onmouseup，鼠标按键放开时触发;->down,按下时触发;->move,移动时触发；		
+	onkeyup,   键盘按键按下时触发；->down,抬起时触发；
+17.BOM
+	alert弹框   prompt确认取消    confirms是否删除
+	onload   页面加载完之后执行；		onunload  页面卸载的时候执行。
+	setTimeout()和clearTimeout()     在指定的毫秒数到达之后执行的函数，只执行一次；取消定时器的执行；
+	setInterval()和clearInterval()   定时调用的函数，可以按照给定的时间周期调用函数；
+
+
