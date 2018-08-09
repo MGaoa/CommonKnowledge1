@@ -1,34 +1,34 @@
 git init        				初始化仓库
 
-git config --global user name "name"    	设置提交人姓名
+git config --global user name "name"    		设置提交人姓名
 
-git config --global user email "email"  	设置提交人邮箱
+git config --global user email "email"  		设置提交人邮箱
 
-git add ./    					把所有文件放到暂存区
+git add ./    				把所有文件放到暂存区
 
 git commit (--all) -m "注释"     		把文件(所有文件)放入版本库
 
-git status   					查询暂存区状态（红色：表示未放入；绿色：表示已放入；）
+git status   				查询暂存区状态（红色：表示未放入；绿色：表示已放入；）
 
-.gitignore    					需要过滤的上传文件
+.gitignore    				需要过滤的上传文件
 
 git log   					查看历史记录
 
 git log --oneline    				查看简洁版历史记录
 
-git reflog     					不小心关闭窗口，查询历史版本号
+git reflog     				不小心关闭窗口，查询历史版本号
 
 git reset --hard Head~0   			回退到上一次代码提交时的状态
 
-gir reset --hard [某次版本号]   		可以精确到某一次版本
+gir reset --hard [某次版本号]   			可以精确到某一次版本
 
-git add ./   					将所有的修改内容放在本地暂存区
+git add ./   				将所有的修改内容放在本地暂存区
 
-git branch [分支名]    				此时分支与主线提交相同
+git branch [分支名]    			此时分支与主线提交相同
 
 git branch        				查看分支
 
-git checkout [分支名]           		切换分支
+git checkout [分支名]           			切换分支
 
 git merge [分支名] 				合并分支
 
@@ -38,7 +38,7 @@ git push [github地址] master    		上传github
 
 git pull [github地址] master     		从远程仓库拉代码
 
-git clone [github地址] 				自己新建一个文件夹，会得到远程仓储相同的数据，多次执行会覆盖
+git clone [github地址] 			自己新建一个文件夹，会得到远程仓储相同的数据，多次执行会覆盖
 
 ssh-keygen -t rsa -C "[邮箱]"			在本地生成公钥跟私钥，在GITHUB上设置公钥，(以后就不用输入用户名和密码,只有本机有私钥才可上传，别人只可下拉)
 
