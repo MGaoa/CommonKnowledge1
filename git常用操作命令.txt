@@ -1,3 +1,10 @@
+
+					git ³£ÓÃÃüÁî´óÈ«
+
+
+
+
+
 git init        				³õÊ¼»¯²Ö¿â
 
 git config --global user name "name"    		ÉèÖÃÌá½»ÈËĞÕÃû
@@ -45,3 +52,5 @@ ssh-keygen -t rsa -C "[ÓÊÏä]"			ÔÚ±¾µØÉú³É¹«Ô¿¸úË½Ô¿£¬ÔÚGITHUBÉÏÉèÖÃ¹«Ô¿£¬(ÒÔºó¾
 git remote add [±äÁ¿Ãû] [github²Ö¿âµØÖ·]     	¸øgithubÉÏ´«µØÖ·¸ü¸Ä±äÁ¿Ãû
 git push [±äÁ¿Ãû] -u master      		Ê¡ÂÔmaster
 //ÉÏ±ßÕâÁ½²½×öÍêÒÔºó¾Í¿ÉÒÔÖ±½Ógit push ,git pull
+
+
